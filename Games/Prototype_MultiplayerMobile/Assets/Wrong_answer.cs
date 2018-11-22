@@ -6,17 +6,19 @@ using UnityEngine.SceneManagement;
 
 public class Wrong_answer : MonoBehaviour {
 
-    public string NextLevel;
-    public void OnWrong()
+    private void Start()
     {
-     
+        StartCoroutine(OnWrong());
+    }
+    public string NextLevel; 
+   IEnumerator  OnWrong()
+    {
+        yield return new WaitForSeconds(2.0f);
             Debug.Log("ChangeScene");
-          //  block.GetComponent<Renderer>().material.color = Color.green;
-            SceneManager.LoadScene("Wrong");
-       
+            SceneManager.LoadScene("SampleScene", LoadSceneMode.Single);
+            
       
-            Debug.Log("Error");
-          //  block.GetComponent<Renderer>().material.color = Color.yellow;
+        
         
 
     }

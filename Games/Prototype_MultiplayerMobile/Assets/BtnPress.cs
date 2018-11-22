@@ -21,4 +21,20 @@ public class BtnPress : MonoBehaviour{
 		} 
 		
 	}
+
+    public void OnWrong()
+    {
+        try
+        {
+            Debug.Log("ChangeScene");
+            block.GetComponent<Renderer>().material.color = Color.green;
+            SceneManager.LoadScene("Wrong", LoadSceneMode.Single);
+        }
+        catch (Exception e)
+        {
+            Debug.Log("Error");
+            block.GetComponent<Renderer>().material.color = Color.yellow;
+        }
+
+    }
 }

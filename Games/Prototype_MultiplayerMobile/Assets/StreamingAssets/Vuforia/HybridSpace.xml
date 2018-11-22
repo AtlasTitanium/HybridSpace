@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
   <Tracking>
+    <ImageTarget name="AardappelSchilster" size="2.000000 2.584814" />
+    <ImageTarget name="The_Nightwatch_by_Rembrandt_Smaller" size="4.800000 3.904000" />
     <ImageTarget name="MonsterOfTheWeek" size="0.200000 0.300000" />
   </Tracking>
 </QCARConfig>
