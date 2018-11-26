@@ -7,6 +7,7 @@ using System;
 
 public class BtnPress : MonoBehaviour{
 	public string NextLevel;
+    public string WrongLevel;
 	public GameObject block;
 	
 	public void NextScene(){
@@ -28,7 +29,7 @@ public class BtnPress : MonoBehaviour{
         {
             Debug.Log("ChangeScene");
             block.GetComponent<Renderer>().material.color = Color.green;
-            SceneManager.LoadScene("Wrong", LoadSceneMode.Single);
+            SceneManager.LoadScene(WrongLevel, LoadSceneMode.Single);
         }
         catch (Exception e)
         {
