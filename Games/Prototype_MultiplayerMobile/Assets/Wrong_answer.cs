@@ -13,13 +13,9 @@ public class Wrong_answer : MonoBehaviour {
     public string NextLevel; 
    IEnumerator  OnWrong()
     {
-        yield return new WaitForSeconds(2.0f);
+        yield return new WaitForSeconds(1.0f);
             Debug.Log("ChangeScene");
-            SceneManager.LoadScene("SampleScene", LoadSceneMode.Single);
-            
+            SceneManager.LoadScene("MilkMaid", LoadSceneMode.Single);
       
-        
-        
-
     }
 }
