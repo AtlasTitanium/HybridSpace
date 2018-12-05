@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -122,9 +122,11 @@ GameObject:
   m_Component:
   - component: {fileID: 675416234}
   - component: {fileID: 675416233}
+  - component: {fileID: 675416236}
+  - component: {fileID: 675416235}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -140,7 +142,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3858019e72454f349814434576967a1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentTeam: 0
+  BackgroundTexture: {fileID: 2800000, guid: 0df09929a560b5b43bcbe4aa662fd562, type: 3}
+  TopTexture: {fileID: 10305, guid: 0000000000000000f000000000000000, type: 0}
+  Team1_Texture: {fileID: 2800000, guid: 8190f99889b55e94da3bf6d56a164519, type: 3}
+  Team1_Check: {fileID: 2800000, guid: 6333f31d27d396543a94b342f0eac895, type: 3}
+  Team2_Texture: {fileID: 2800000, guid: 50c1250595907164c87fd4e679fbbf49, type: 3}
+  Team2_Check: {fileID: 2800000, guid: 6cef66de024103c42acc34c3b3072e02, type: 3}
+  Team3_Texture: {fileID: 2800000, guid: 92ed9132c30c54f4097fea13750a1a0c, type: 3}
+  Team3_Check: {fileID: 2800000, guid: a7615b8fd39a03f448176141d0c848ec, type: 3}
+  Team4_Texture: {fileID: 2800000, guid: 40908166b5fd6a64d9f7d317e491468d, type: 3}
+  Team4_Check: {fileID: 2800000, guid: 978244e56a3376c49b7ac1905b75e9d7, type: 3}
+  KiesJeTeam: {fileID: 2800000, guid: 9cf99b9b0baeadd44948f280d3f946e4, type: 3}
+  NextButton: {fileID: 2800000, guid: aceece1d545d3a048ad5a9bce46c40a0, type: 3}
 --- !u!4 &675416234
 Transform:
   m_ObjectHideFlags: 0
@@ -154,6 +167,104 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &675416235
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 675416232}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54ecc82a05877a24baa571376f4cd5e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  style:
+    m_Name: 
+    m_Normal:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_Hover:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_Active:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_Focused:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_OnNormal:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_OnHover:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_OnActive:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_OnFocused:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_Border:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    m_Margin:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    m_Padding:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    m_Overflow:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    m_Font: {fileID: 0}
+    m_FontSize: 0
+    m_FontStyle: 0
+    m_Alignment: 4
+    m_WordWrap: 0
+    m_RichText: 1
+    m_TextClipping: 0
+    m_ImagePosition: 0
+    m_ContentOffset: {x: 0, y: 0}
+    m_FixedWidth: 0
+    m_FixedHeight: 0
+    m_StretchWidth: 1
+    m_StretchHeight: 0
+  infoBar: {fileID: 2800000, guid: fb878e688e4185f4c84b796fbcf895bf, type: 3}
+  Dyslectic_font: {fileID: 12800000, guid: 4c711bab75c30ef4bb958321176c0e7d, type: 3}
+--- !u!114 &675416236
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 675416232}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45e61a10bb876d14398ff0239269ca70, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentTeam: 0
+  teamScore: 0
+  ARScene: ArEnviroment
+  winScene: WinScene
+  puzzle1: 0
+  puzzle2: 0
+  puzzle3: 0
 --- !u!1 &1022063519
 GameObject:
   m_ObjectHideFlags: 0
