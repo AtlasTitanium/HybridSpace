@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 public class KairoPuzzle : MonoBehaviour {
 
 	private PlayerInfo pInfo;
-	public GameObject finishedPuzzle;
 	public GameObject brokenPuzzle;
 	public Button startPuzzleButton;
 	public GameObject[] puzzlePieces;
@@ -29,7 +28,6 @@ public class KairoPuzzle : MonoBehaviour {
 	}
 
 	void Update(){
-		finishedPuzzle.SetActive(pInfo.puzzle3);
 		brokenPuzzle.SetActive(!pInfo.puzzle3);
 
 		if(!startPuzzleButton.gameObject.active){
