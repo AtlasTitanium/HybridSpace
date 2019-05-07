@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 public class Draggable : MonoBehaviour, IDragHandler, IEndDragHandler {
-	private Vector3 hitPoint;
+	private Vector3 hitpos;
 	public LayerMask layerMask;
 	public void OnDrag(PointerEventData eventData){
 		this.GetComponent<Collider>().enabled = false;
@@ -12,13 +12,14 @@ public class Draggable : MonoBehaviour, IDragHandler, IEndDragHandler {
 		RaycastHit hit;
 		if (Physics.Raycast (ray, out hit, 50f, layerMask)) 
 		{
-			hitPoint = hit.point;
-			transform.position = new Vector3(hit.point.x,hit.point.y,transform.position.z);			
-		}    
+			hitpos = hit.point;
+			transform.position = new Vector3(hit.point.x,hit.point.y,transform.position.z);	
+		}
 	}
 
 	public void OnEndDrag(PointerEventData eventData){
 		this.GetComponent<Collider>().enabled = true;
-		transform.position = hitPoint;
+		transform.GetComponent<Image>().color = Color.green;
+		transform.position = hitpos;
 	}
 }
